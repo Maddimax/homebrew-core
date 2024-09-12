@@ -12,7 +12,8 @@ class Upx < Formula
   end
 
   # https://github.com/upx/upx/issues/612
-  disable! date: "2024-09-05", because: "is crashing for macOS Ventura or above"
+  # Even if it produces broken binaries for macOS, it still works well to compress windows / linux binaries
+  # disable! date: "2024-09-05", because: "is crashing for macOS Ventura or above"
 
   depends_on "cmake" => :build
   depends_on "ucl" => :build
